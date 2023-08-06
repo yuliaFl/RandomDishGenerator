@@ -6,6 +6,8 @@ import Random from "./components/random";
 import Homepage from "./components/homepage";
 import Garnir from "./components/garnir";
 import Meat from "./components/meat";
+import Generate from "./components/generate";
+import Add from "./components/add";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,10 +21,13 @@ function MyStack() {
   return (
     <Stack.Navigator style={styles.container}>
       <Stack.Group screenOptions={options}>
+      <Stack.Screen name="Add" component={Add} />
       <Stack.Screen name="Homepage" component={Homepage} />
-      <Stack.Screen name="Random" component={Random} />
+      <Stack.Screen name="Generate" component={Generate} />
+     
       <Stack.Screen name="Garnir" component={Garnir} />
       <Stack.Screen name="Meat" component={Meat} />
+      <Stack.Screen name="Random" component={Random} />
       </Stack.Group>
     </Stack.Navigator>
   );

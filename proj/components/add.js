@@ -7,22 +7,20 @@ import {
   TextInput,
   number,
   Button,
+  text,
+  CheckBox,
 } from "react-native";
 
-export default function Random({ navigation }) {
+export default function Add({ navigation }) {
+  const [isSelected, setSelection] = useState(false);
   return (
     <View style={styles.container}>
-      <Button
-        style={styles.button}
-        title="Add"
-        onPress={() => navigation.navigate("Add")}
-      />
-      <p> </p>
-      <Button
-        style={styles.button}
-        title="Generate"
-        onPress={() => navigation.navigate("Generate")}
-      />
+      <TextInput style={styles.input} value={text} placeholder="What to add" />
+      <View style={styles.checkboxContainer}>
+        <CheckBox value={isSelected} onValueChange={setSelection} />
+        <Text style={styles.label}> Garnir</Text>
+      </View>
+      <Button style={styles.button} title="Add" />
     </View>
   );
 }
@@ -47,5 +45,15 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 16,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+  checkboxContainer: {
+    flexDirection: "row",
+    marginBottom: 20,
   },
 });

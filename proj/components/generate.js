@@ -9,19 +9,25 @@ import {
   Button,
 } from "react-native";
 
-export default function Random({ navigation }) {
+export default function Generate({ navigation }) {
   return (
     <View style={styles.container}>
       <Button
         style={styles.button}
-        title="Add"
-        onPress={() => navigation.navigate("Add")}
+        title="Гарнир"
+        onPress={() => navigation.navigate("Garnir")}
       />
       <p> </p>
       <Button
         style={styles.button}
-        title="Generate"
-        onPress={() => navigation.navigate("Generate")}
+        title="Мясо"
+        onPress={() => navigation.navigate("Meat")}
+      />
+      <p></p>
+      <Button
+        style={styles.button}
+        title="Блюда"
+        onPress={() => navigation.navigate("Random")}
       />
     </View>
   );
