@@ -7,28 +7,35 @@ import {
   TextInput,
   number,
   Button,
+  TouchableOpacity
 } from "react-native";
 
 export default function Generate({ navigation }) {
   return (
     <View style={styles.container}>
-      <Button
+      <TouchableOpacity
         style={styles.button}
-        title="Гарнир"
+        title="Generate"
         onPress={() => navigation.navigate("Garnir")}
-      />
+      >
+        <Text style={{ color: "white" }}>Garnir</Text>
+      </TouchableOpacity>
       <p> </p>
-      <Button
+      <TouchableOpacity
         style={styles.button}
-        title="Мясо"
+        title="Generate"
         onPress={() => navigation.navigate("Meat")}
-      />
+      >
+        <Text style={{ color: "white" }}>Meat</Text>
+      </TouchableOpacity>
       <p></p>
-      <Button
+      <TouchableOpacity
         style={styles.button}
-        title="Блюда"
+        title="Generate"
         onPress={() => navigation.navigate("Random")}
-      />
+      >
+        <Text style={{ color: "white" }}>Random</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -36,19 +43,20 @@ export default function Generate({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    backgroundColor: "white",
+    backgroundColor: "#f6f6f6",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 5,
+    marginLeft: 30,
+    marginRight: 15,
   },
   button: {
-    width: "80%",
-    backgroundColor: "#fc5185",
+    width: "60%",
+    backgroundColor: "#088F8F",
     borderRadius: 20,
     padding: 10,
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 15,
   },
   buttonText: {
     color: "white",

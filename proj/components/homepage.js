@@ -7,22 +7,21 @@ import {
   TextInput,
   number,
   Button,
+  TouchableOpacity
 } from "react-native";
 
 export default function Random({ navigation }) {
   return (
     <View style={styles.container}>
-      <Button
-        style={styles.button}
-        title="Add"
-        onPress={() => navigation.navigate("Add")}
-      />
+         <TouchableOpacity style={styles.button}   title="Generate"
+        onPress={() => navigation.navigate("Add")}>
+        <Text style={{ color: "white" }}>Add</Text>
+      </TouchableOpacity>
       <p> </p>
-      <Button
-        style={styles.button}
-        title="Generate"
-        onPress={() => navigation.navigate("Generate")}
-      />
+      <TouchableOpacity style={styles.button}   title="Generate"
+        onPress={() => navigation.navigate("Generate")}>
+        <Text style={{ color: "white" }}>Generate</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -30,19 +29,20 @@ export default function Random({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    backgroundColor: "white",
+    backgroundColor: "#f6f6f6",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 5,
+    marginLeft: 30,
+    marginRight: 15,
   },
   button: {
-    height: 40,
-    width: 1000,
-    backgroundColor: "green",
-    justifyContent: "center",
+    width: "60%",
+    backgroundColor: "#088F8F",
+    borderRadius: 20,
+    padding: 10,
     alignItems: "center",
-    borderRadius: 1,
+    marginTop: 15,
   },
   buttonText: {
     color: "white",

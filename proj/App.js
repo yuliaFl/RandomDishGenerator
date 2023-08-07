@@ -21,10 +21,10 @@ function MyStack() {
   return (
     <Stack.Navigator style={styles.container}>
       <Stack.Group screenOptions={options}>
-      <Stack.Screen name="Add" component={Add} />
       <Stack.Screen name="Homepage" component={Homepage} />
       <Stack.Screen name="Generate" component={Generate} />
-     
+      <Stack.Screen name="Add" component={Add} />
+    
       <Stack.Screen name="Garnir" component={Garnir} />
       <Stack.Screen name="Meat" component={Meat} />
       <Stack.Screen name="Random" component={Random} />

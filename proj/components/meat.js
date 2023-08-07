@@ -7,14 +7,15 @@ import {
   TextInput,
   number,
   Button,
+  TouchableOpacity
 } from "react-native";
 
 export default function Random({ navigation }) {
-  const [words, setWords] = useState(["Отбивная","Курица в кляре","Говядина в мультиварке","Мясо под помидорами","Куриные ножки","Куриные бедра"]);
+  const [words, setWords] = useState(["Отбивная","Курица в кляре","Говядина в мультиварке","Мясо под помидорами","Куриные ножки","Куриные бедра", "Тефтели"]);
   const [randomWord, setRandomWord] = useState("Мясо");
   const [lastIndex, setLastIndex] = useState(-1);
 
-  const onPressButton = () => {
+  const search = () => {
     let randomIndex = Math.floor(Math.random() * words.length);
     while (randomIndex === lastIndex) {
       randomIndex = Math.floor(Math.random() * words.length);
@@ -26,7 +27,13 @@ export default function Random({ navigation }) {
   return (
     <View style={styles.container}>
       <h1>{randomWord}</h1>
-      <Button title="Мне все равно" onPress={onPressButton} />
+      <TouchableOpacity
+        style={styles.button}
+        title="Generate"
+        onPress={search}
+      >
+        <Text style={{ color: "white" }}>Search</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -34,11 +41,12 @@ export default function Random({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    backgroundColor: "white",
+    backgroundColor: "#f6f6f6",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 5,
+    marginLeft: 30,
+    marginRight: 15,
   },
   input: {
     height: 40,
@@ -49,12 +57,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   button: {
-    height: 40,
-    width: 200,
-    backgroundColor: "blue",
-    justifyContent: "center",
+    width: "60%",
+    backgroundColor: "#088F8F",
+    borderRadius: 20,
+    padding: 10,
     alignItems: "center",
-    borderRadius: 5,
+    marginTop: 15,
   },
   buttonText: {
     color: "white",

@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   submit: {
     width: "80%",
-    backgroundColor: "#fc5185",
+    backgroundColor: "#088F8F",
     borderRadius: 20,
     padding: 10,
     alignItems: "center",
