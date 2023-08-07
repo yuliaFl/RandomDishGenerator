@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   button: {
-    height: 40,
-    width: 1000,
-    backgroundColor: "green",
-    justifyContent: "center",
+    width: "80%",
+    backgroundColor: "#fc5185",
+    borderRadius: 20,
+    padding: 10,
     alignItems: "center",
-    borderRadius: 1,
+    marginTop: 40,
   },
   buttonText: {
     color: "white",
